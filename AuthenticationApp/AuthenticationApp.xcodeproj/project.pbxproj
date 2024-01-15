@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EECEA1772B2A700C000C3A5E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA1762B2A700C000C3A5E /* Data.swift */; };
+		EED1609B2B16658F006D3FEA /* AuthenticationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1609A2B16658F006D3FEA /* AuthenticationAppApp.swift */; };
+		EED1609D2B16658F006D3FEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1609C2B16658F006D3FEA /* ContentView.swift */; };
+		EED1609F2B166591006D3FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED1609E2B166591006D3FEA /* Assets.xcassets */; };
+		EED160A32B166591006D3FEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED160A22B166591006D3FEA /* Preview Assets.xcassets */; };
+		EED160AA2B17A6E7006D3FEA /* GeneratingPrimeNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED160A92B17A6E6006D3FEA /* GeneratingPrimeNumbersView.swift */; };
+		EED160AC2B17AF52006D3FEA /* CheckingPrimeNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED160AB2B17AF52006D3FEA /* CheckingPrimeNumbersView.swift */; };
+		EED160AE2B17E1C6006D3FEA /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED160AD2B17E1C6006D3FEA /* ResultView.swift */; };
+		EED160B02B17E46C006D3FEA /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED160AF2B17E46C006D3FEA /* DataSource.swift */; };
+		EED160B22B18BEDE006D3FEA /* GeneratingCryptographicKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED160B12B18BEDE006D3FEA /* GeneratingCryptographicKeysView.swift */; };
+		EED160B42B18D072006D3FEA /* SenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED160B32B18D072006D3FEA /* SenderView.swift */; };
+		EED160B62B18D089006D3FEA /* RecipientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED160B52B18D089006D3FEA /* RecipientView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EECEA1762B2A700C000C3A5E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		EED160972B16658F006D3FEA /* AuthenticationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthenticationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED1609A2B16658F006D3FEA /* AuthenticationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAppApp.swift; sourceTree = "<group>"; };
+		EED1609C2B16658F006D3FEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EED1609E2B166591006D3FEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EED160A02B166591006D3FEA /* AuthenticationApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AuthenticationApp.entitlements; sourceTree = "<group>"; };
+		EED160A22B166591006D3FEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EED160A92B17A6E6006D3FEA /* GeneratingPrimeNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratingPrimeNumbersView.swift; sourceTree = "<group>"; };
+		EED160AB2B17AF52006D3FEA /* CheckingPrimeNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingPrimeNumbersView.swift; sourceTree = "<group>"; };
+		EED160AD2B17E1C6006D3FEA /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		EED160AF2B17E46C006D3FEA /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		EED160B12B18BEDE006D3FEA /* GeneratingCryptographicKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratingCryptographicKeysView.swift; sourceTree = "<group>"; };
+		EED160B32B18D072006D3FEA /* SenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderView.swift; sourceTree = "<group>"; };
+		EED160B52B18D089006D3FEA /* RecipientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EED160942B16658F006D3FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EED1608E2B16658F006D3FEA = {
+			isa = PBXGroup;
+			children = (
+				EED160992B16658F006D3FEA /* AuthenticationApp */,
+				EED160982B16658F006D3FEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EED160982B16658F006D3FEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EED160972B16658F006D3FEA /* AuthenticationApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EED160992B16658F006D3FEA /* AuthenticationApp */ = {
+			isa = PBXGroup;
+			children = (
+				EED1609A2B16658F006D3FEA /* AuthenticationAppApp.swift */,
+				EED1609C2B16658F006D3FEA /* ContentView.swift */,
+				EED160B32B18D072006D3FEA /* SenderView.swift */,
+				EED160B52B18D089006D3FEA /* RecipientView.swift */,
+				EECEA1762B2A700C000C3A5E /* Data.swift */,
+				EED160AD2B17E1C6006D3FEA /* ResultView.swift */,
+				EED160A92B17A6E6006D3FEA /* GeneratingPrimeNumbersView.swift */,
+				EED160AF2B17E46C006D3FEA /* DataSource.swift */,
+				EED160AB2B17AF52006D3FEA /* CheckingPrimeNumbersView.swift */,
+				EED160B12B18BEDE006D3FEA /* GeneratingCryptographicKeysView.swift */,
+				EED1609E2B166591006D3FEA /* Assets.xcassets */,
+				EED160A02B166591006D3FEA /* AuthenticationApp.entitlements */,
+				EED160A12B166591006D3FEA /* Preview Content */,
+			);
+			path = AuthenticationApp;
+			sourceTree = "<group>";
+		};
+		EED160A12B166591006D3FEA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EED160A22B166591006D3FEA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EED160962B16658F006D3FEA /* AuthenticationApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED160A62B166591006D3FEA /* Build configuration list for PBXNativeTarget "AuthenticationApp" */;
+			buildPhases = (
+				EED160932B16658F006D3FEA /* Sources */,
+				EED160942B16658F006D3FEA /* Frameworks */,
+				EED160952B16658F006D3FEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuthenticationApp;
+			productName = AuthenticationApp;
+			productReference = EED160972B16658F006D3FEA /* AuthenticationApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EED1608F2B16658F006D3FEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					EED160962B16658F006D3FEA = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = EED160922B16658F006D3FEA /* Build configuration list for PBXProject "AuthenticationApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EED1608E2B16658F006D3FEA;
+			productRefGroup = EED160982B16658F006D3FEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EED160962B16658F006D3FEA /* AuthenticationApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EED160952B16658F006D3FEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED160A32B166591006D3FEA /* Preview Assets.xcassets in Resources */,
+				EED1609F2B166591006D3FEA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EED160932B16658F006D3FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED160B22B18BEDE006D3FEA /* GeneratingCryptographicKeysView.swift in Sources */,
+				EECEA1772B2A700C000C3A5E /* Data.swift in Sources */,
+				EED1609D2B16658F006D3FEA /* ContentView.swift in Sources */,
+				EED160AC2B17AF52006D3FEA /* CheckingPrimeNumbersView.swift in Sources */,
+				EED160B02B17E46C006D3FEA /* DataSource.swift in Sources */,
+				EED160B62B18D089006D3FEA /* RecipientView.swift in Sources */,
+				EED160AE2B17E1C6006D3FEA /* ResultView.swift in Sources */,
+				EED1609B2B16658F006D3FEA /* AuthenticationAppApp.swift in Sources */,
+				EED160B42B18D072006D3FEA /* SenderView.swift in Sources */,
+				EED160AA2B17A6E7006D3FEA /* GeneratingPrimeNumbersView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EED160A42B166591006D3FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EED160A52B166591006D3FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EED160A72B166591006D3FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AuthenticationApp/AuthenticationApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AuthenticationApp/Preview Content\"";
+				DEVELOPMENT_TEAM = V6R4C94Z69;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grigorchukanastasiia.AuthenticationApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EED160A82B166591006D3FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AuthenticationApp/AuthenticationApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AuthenticationApp/Preview Content\"";
+				DEVELOPMENT_TEAM = V6R4C94Z69;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grigorchukanastasiia.AuthenticationApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EED160922B16658F006D3FEA /* Build configuration list for PBXProject "AuthenticationApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED160A42B166591006D3FEA /* Debug */,
+				EED160A52B166591006D3FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED160A62B166591006D3FEA /* Build configuration list for PBXNativeTarget "AuthenticationApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED160A72B166591006D3FEA /* Debug */,
+				EED160A82B166591006D3FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EED1608F2B16658F006D3FEA /* Project object */;
+}
