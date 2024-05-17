@@ -14,14 +14,14 @@ struct ResultView: View {
     var body: some View {
         VStack {
 //            Text("Число r: \(dataSource.schnorrAuthentication.r)")
-            Text("Число r: \(number.r)")
+            Text("Число u: \(number.w)")
             Text("\(dataSource.rString)")
-            if dataSource.rString == number.r  {
-                Text("Аутентификация успешна")
+            if dataSource.changedW == "" || dataSource.changedS == "" {
+                Text("Подлинность подписи подтверждена")
                     .foregroundStyle(.green)
                 Text(dataSource.text)
             } else {
-                Text("Аутентификация не пройдена")
+                Text("Подпись не подлинна")
                     .foregroundStyle(.red)
             }
             Button("Закончить сессию") {

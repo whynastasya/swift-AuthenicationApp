@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var dataSource = DataSource()
-
+    @State var text = ""
     var body: some View {
         VStack {
             if dataSource.isAuthenticationStarted == false {
-                Text("Сервер")
+                Text("Цифровая подпись")
                     .font(.title)
                     .padding()
                 

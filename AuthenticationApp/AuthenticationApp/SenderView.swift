@@ -16,90 +16,100 @@ struct SenderView: View {
     @State var s: Int = 0
     @State var rLabel: String = ""
     @State var rString = ""
+    @State var changedW = ""
+    @State var changedS = ""
     
     var body: some View {
         VStack {
-            Text("Проверяемый")
+            Text("Отправитель")
                 .font(.title)
                 .padding()
             
-//            Text("Открытый ключ y: \(dataSource.schnorrKeyPair.publicKey)")
-//            Text("Секретный ключ x: \(dataSource.schnorrKeyPair.privateKey)")
+            //            Text("Открытый ключ y: \(dataSource.schnorrKeyPair.publicKey)")
+            //            Text("Секретный ключ x: \(dataSource.schnorrKeyPair.privateKey)")
             Text("Открытый ключ y: \(number.y)")
             Text("Секретный ключ x: \(number.x)")
             
-            if dataSource.isRSent == false {
-                TextField("Введите сообщение", text: $text)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(maxWidth: 300)
+            if !dataSource.isWSSent {
+                    TextField("Введите сообщение", text: $text)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(maxWidth: 300)
+                    
+                    Button("Вычислить хеш-значения") {
+                        withAnimation {
+                            k = generateK(q: dataSource.schnorrKeyPair.q)
+                            r = calculateR(g: dataSource.schnorrKeyPair.g, k: k, p: dataSource.schnorrKeyPair.p)
+                            //                        rLabel = "Число r: \(r)"
+                            rLabel = "Число k: \(number.k)"
+                            dataSource.text = text
+                            dataSource.isHCalculated = true
+                        }
+                }
                 
-                Button("Вычислить число r") {
-                    withAnimation {
-                        k = generateK(q: dataSource.schnorrKeyPair.q)
-                        r = calculateR(g: dataSource.schnorrKeyPair.g, k: k, p: dataSource.schnorrKeyPair.p)
-                        dataSource.isRCalculated = true
-//                        rLabel = "Число r: \(r)"
-                        rLabel = "Число r: \(number.r)"
-                        dataSource.rString = number.r
+                if dataSource.isHCalculated {
+                    if dataSource.isWCalculated == false {
+                        Text("h: \(number.p)")
+                        Button("Вычислить число k") {
+                            withAnimation {
+                                k = generateK(q: dataSource.schnorrKeyPair.q)
+                                r = calculateR(g: dataSource.schnorrKeyPair.g, k: k, p: dataSource.schnorrKeyPair.p)
+                                dataSource.isKCalculated = true
+                                //                        rLabel = "Число r: \(r)"
+                                rLabel = "Число k: \(number.k)"
+                                dataSource.text = text
+                                dataSource.isKCalculated = true
+                            }
+                        }
+                        .padding()
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                    }
+                    
+                    if dataSource.isKCalculated {
+                        Text("Число k:\(number.k)")
+                        
+                        Button("Зашифровать сообщение и подписать его") {
+                            withAnimation {
+                                dataSource.isWCalculated = true
+                            }
+                        }
+                        .padding()
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                    }
+                    
+                    if dataSource.isWCalculated {
+                        Text("W:\(number.w)")
+                        Text("S: \(number.s)")
+                        
+                        Button("Атака на подпись") {
+                            withAnimation {
+                                dataSource.isWSChanged = true
+                                changedW = "\(number.w)"
+                                changedS = "\(number.s)"
+                            }
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.red)
+                        
+                        if dataSource.isWSChanged {
+                            TextField("", text: $changedW)
+                            TextField("", text: $changedS)
+                        }
+                        
+                        Button("Отправить получателю") {
+                            withAnimation {
+                                dataSource.isWSSent = true
+                                dataSource.text2 = text
+                                dataSource.changedS = changedS
+                                dataSource.changedW = changedW
+                            }
+                        }
+                        .padding()
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
                     }
                 }
-                .padding()
-                .buttonStyle(.borderedProminent)
-                .tint(.green)
-            }
-            
-//            Text(rLabel)
-            
-            if dataSource.isRCalculated == true && dataSource.isEGenerated == false {
-//                Text("Сгенерированное число k: \(k)")
-                Text("Сгенерированное число k: \(number.k)")
-                
-                Text("Число r:")
-                TextField("", text: $dataSource.rString)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(maxWidth: 300)
-                    .tint(.green)
-                
-                Button("Отправить число r") {
-                    withAnimation {
-                        dataSource.schnorrAuthentication.k = k
-                        dataSource.schnorrAuthentication.r = r
-                        dataSource.text = text
-                        dataSource.isRSent = true
-                    }
-                }
-                .padding()
-                .buttonStyle(.borderedProminent)
-                .tint(.green)
-            }
-            
-            if dataSource.isESent == true && dataSource.isSSent == false {
-//                Text("Число e: \(dataSource.schnorrAuthentication.e)")
-                Text("Число e: \(number.e)")
-                Button("Вычислить число s") {
-                    withAnimation {
-                        s = calculateS(k: dataSource.schnorrAuthentication.k, x: dataSource.schnorrKeyPair.privateKey, e: dataSource.schnorrAuthentication.e, q: dataSource.schnorrKeyPair.q)
-                        dataSource.isSCalculated = true
-                    }
-                }
-                .padding()
-                .buttonStyle(.borderedProminent)
-                .tint(.green)
-            }
-            
-            if dataSource.isSCalculated == true {
-//                Text("Число s: \(s)")
-                Text("Число s: \(number.s)")
-                
-                Button("Отправить число s") {
-                    withAnimation {
-                        dataSource.schnorrAuthentication.s = s
-                        dataSource.isSSent = true
-                    }
-                }
-                .padding()
-                .buttonStyle(.borderedProminent)
-                .tint(.green)
             }
         }
         .padding()

@@ -16,19 +16,45 @@ struct RecipientView: View {
 
     var body: some View {
         VStack {
-            Text("Проверяющий")
+            Text("Получатель")
                 .font(.title)
                 .padding()
-//            Text("Открытый ключ y: \(dataSource.schnorrKeyPair.publicKey)")
-            Text("Открытый ключ y: \(number.y)")
-            if dataSource.isRSent == true && dataSource.isEGenerated == false {
-//                Text("Число r: \(dataSource.schnorrAuthentication.r)")
-                Text("Число r: \(number.r)")
+            //            Text("Открытый ключ y: \(dataSource.schnorrKeyPair.publicKey)"
+            if dataSource.isWSSent {
+                //                Text("Число r: \(dataSource.schnorrAuthentication.r)")
+                Text("W: \(number.w)")
+                Text("S: \(number.s)")
+                Text("h: \(number.p)")
+                Text(dataSource.text)
                 
-                Button("Сгенирировать число e") {
+                Button("Проверить h") {
                     withAnimation {
                         e = generateE()
-                        dataSource.isEGenerated = true
+                        if dataSource.text == dataSource.text2 {
+                            dataSource.isHChecked = true
+                        } else {
+                            dataSource.isHError = true
+                        }
+                    }
+                }
+                .padding()
+                .buttonStyle(.borderedProminent)
+                .tint(.green)
+            }
+            if dataSource.isHError {
+                Text("Хеш-значения НЕВЕРНЫ")
+                    .foregroundStyle(.red)
+            }
+            
+            if dataSource.isHChecked {
+                //                Text("Число r: \(dataSource.schnorrAuthentication.r)")
+                
+                Text("Хеш-значения верны")
+                    .foregroundStyle(.green)
+                Button("Вычислить v") {
+                    withAnimation {
+                        e = generateE()
+                        dataSource.isVCalculated = true
                     }
                 }
                 .padding()
@@ -36,13 +62,14 @@ struct RecipientView: View {
                 .tint(.green)
             }
             
-            if dataSource.isEGenerated == true && dataSource.isSCalculated == false {
-//                Text("Сгенерированное число e: \(e)")
-                Text("Сгенерированное число e: \(number.e)")
-                Button("Отправить число e") {
+            if dataSource.isVCalculated {
+                //                Text("Сгенерированное число e: \(e)")
+                Text("v: \(number.a)")
+                
+                Button("Вычислить числа z1 и z2") {
                     withAnimation {
                         dataSource.schnorrAuthentication.e = e
-                        dataSource.isESent = true
+                        dataSource.isZ1Calculated = true
                     }
                 }
                 .padding()
@@ -50,10 +77,11 @@ struct RecipientView: View {
                 .tint(.green)
             }
             
-            if dataSource.isSSent == true {
-//                Text("Число s: \(dataSource.schnorrAuthentication.s)")
-                Text("Число s: \(number.s)")
-                Button("Проверка аутентификации") {
+            if dataSource.isZ1Calculated {
+                Text("z1: \(number.p)")
+                Text("z2: \(number.q)")
+                
+                Button("Проверка") {
                     withAnimation {
                         r1 = calculateR(g: dataSource.schnorrAuthentication.r, s: dataSource.schnorrAuthentication.s, y: dataSource.schnorrKeyPair.publicKey, e: dataSource.schnorrAuthentication.e, p: dataSource.schnorrKeyPair.p)
                         dataSource.schnorrAuthentication.r1 = r1
@@ -62,7 +90,7 @@ struct RecipientView: View {
                 }
                 .padding()
                 .buttonStyle(.borderedProminent)
-                .tint(.green)
+                .tint(.purple)
                 .sheet(isPresented: $isPresentedResultView, content: {
                     ResultView(dataSource: dataSource, isPresentedResultView: isPresentedResultView)
                 })

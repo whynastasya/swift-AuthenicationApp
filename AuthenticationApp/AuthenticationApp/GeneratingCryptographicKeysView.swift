@@ -10,13 +10,14 @@ import SwiftUI
 struct GeneratingCryptographicKeysView: View {
     @State private var publicKey = ""
     @State private var privateKey = ""
+    @State private var a = ""
     @State private var isGeneratingButtonTapped = false
     @State private var isMessageButtonTapped = false
     @StateObject var dataSource: DataSource
     
     var body: some View {
         VStack {
-            Text("Генерация ключей по схеме Клауса Шнорра")
+            Text("Выработка ключей ГОСТ 34.10-94")
                 .font(.title)
                 .padding()
             
@@ -26,8 +27,9 @@ struct GeneratingCryptographicKeysView: View {
                         let schnorrKeyPair = generateSchnorrKeyPair()
 //                        publicKey = "Открытый ключ: \(schnorrKeyPair.publicKey)"
 //                        privateKey = "Закрытый ключ: \(schnorrKeyPair.privateKey)"
+                        privateKey = "Cекретный ключ: \(number.x)"
+                        a = "Целое число а: \(number.a)"
                         publicKey = "Открытый ключ: \(number.y)"
-                        privateKey = "Закрытый ключ: \(number.x)"
                         dataSource.schnorrKeyPair = schnorrKeyPair
                         dataSource.isKeysGenerated = true
                     }
@@ -39,8 +41,13 @@ struct GeneratingCryptographicKeysView: View {
             .tint(.green)
             
             VStack {
+                VStack {
+                    Text(privateKey)
+                    Text(a)
+                }
+                .padding()
                 Text(publicKey)
-                Text(privateKey)
+                
                 
                 if dataSource.isNumbersGenerated == false && isGeneratingButtonTapped == true {
                     Text("Сначала сгенерируйте простые числа")
@@ -51,7 +58,7 @@ struct GeneratingCryptographicKeysView: View {
                 }
                 
                 if dataSource.isKeysGenerated == true {
-                    Button("Отправить ключи") {
+                    Button("Публикация ключей") {
                         isMessageButtonTapped = true
                         dataSource.isAuthenticationStarted = true
                     }
