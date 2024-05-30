@@ -90,7 +90,7 @@ struct RecipientView: View {
                 }
                 .padding()
                 .buttonStyle(.borderedProminent)
-                .tint(.purple)
+                .tint(.green)
                 .sheet(isPresented: $isPresentedResultView, content: {
                     ResultView(dataSource: dataSource, isPresentedResultView: isPresentedResultView)
                 })
