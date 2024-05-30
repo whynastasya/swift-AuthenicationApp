@@ -16,9 +16,9 @@
 - Атака по поиску закрытого ключа
 
 ## Скриншоты
-<img src="/AuthenicationApp/Screenshots/1.png" width="500">
-<img src="/AuthenicationApp/Screenshots/2.png" width="500">
-<img src="/AuthenicationApp/Screenshots/3.png" width="500">
+<img src="/AuthenticationApp/Screenshots/1.png" width="500">
+<img src="/AuthenticationApp/Screenshots/2.png" width="500">
+<img src="/AuthenticationApp/Screenshots/3.png" width="500">
 
 ## Технологии
 - SwiftUI macOS 14.0
