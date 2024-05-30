@@ -17,4 +17,4 @@
 
 
 ## Технологии
-- SwiftUI
+- SwiftUI macOS 14.0
